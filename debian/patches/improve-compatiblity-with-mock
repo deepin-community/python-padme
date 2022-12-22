@@ -1,0 +1,37 @@
+From c5fcc31b962ab0b33feaf4867aa5793995317472 Mon Sep 17 00:00:00 2001
+From: Zygmunt Krynicki <zygmunt.krynicki@canonical.com>
+Date: Thu, 8 Oct 2015 12:38:25 -0700
+Subject: <short summary of the patch>
+
+ This patch fixes a build issue that started to occur as upstream mock has
+ re-organized its internal layout. The issue is that padme needs to patch (fix)
+ bugs in mock that are present on certain versions (especially in released
+ versions of python that have broken unittest.mock) and the patching code does
+ mess with some of the mock internals.
+
+Origin: upstream
+Bug: https://github.com/zyga/padme/issues/15
+Forwarded: not-needed
+Last-Update: 2015-09-02
+
+Patch-Name: improve-compatiblity-with-mock
+---
+ padme/tests.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/padme/tests.py b/padme/tests.py
+index 7475e31..e9cd08b 100644
+--- a/padme/tests.py
++++ b/padme/tests.py
+@@ -38,7 +38,10 @@ if sys.version_info[0:2] >= (3, 4):
+     from unittest import mock
+ else:
+     import unittest2 as unittest
+-    import mock
++    try:
++        import mock.mock as mock
++    except ImportError:
++        import mock
+ 
+ 
+ # https://code.google.com/p/mock/issues/detail?id=247

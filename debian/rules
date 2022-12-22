@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=padme
+
+%:
+	dh $@ --with=python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_build:
+	dh_auto_build --buildsystem=pybuild
+	python3 setup.py build_sphinx -b html

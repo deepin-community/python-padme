@@ -1,0 +1,46 @@
+Source: python-padme
+Section: python
+Priority: optional
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Zygmunt Krynicki <zygmunt.krynicki@canonical.com>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+               python3-sphinx
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-padme.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-padme
+Homepage: https://github.com/zyga/padme/
+Testsuite: autopkgtest-pkg-python
+
+Package: python-padme-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}, ${sphinxdoc:Depends}
+Multi-Arch: foreign
+Description: mostly transparent proxy class for Python (documentation)
+ Padme, named after the Star Wars (tm) character, is a library for creating
+ proxy objects out of any other Python object.
+ .
+ The resulting object is as close to mimicking the original as possible. Some
+ things are impossible to fake in CPython so those are highlighted in the
+ documentation (though mainly object identity). All other operations are
+ silently forwarded to the original.
+ .
+ This package contains the HTML documentation
+
+Package: python3-padme
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Suggests: python-padme-doc
+Description: mostly transparent proxy class for Python 3
+ Padme, named after the Star Wars (tm) character, is a library for creating
+ proxy objects out of any other Python object.
+ .
+ The resulting object is as close to mimicking the original as possible. Some
+ things are impossible to fake in CPython so those are highlighted in the
+ documentation (though mainly object identity). All other operations are
+ silently forwarded to the original.
+ .
+ This package contains the Python 3.x version of the library

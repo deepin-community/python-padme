@@ -1,0 +1,64 @@
+python-padme (1.1.1-4) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Apply multi-arch hints.
+    + python-padme-doc: Add Multi-Arch: foreign.
+  * Update standards version to 4.5.0, no changes needed.
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
+  * Update standards version to 4.6.0, no changes needed.
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 03 Jun 2022 23:14:03 -0400
+
+python-padme (1.1.1-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Zygmunt Krynicki ]
+  * Correct package description (closes: #783930)
+  * Suggest installation of python-padme-doc for python-padme and
+    python3-padme
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/control: Deprecating priority extra as per policy 4.0.1
+  * d/watch: Use https protocol
+  * d/changelog: Remove trailing whitespaces
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use debhelper-compat instead of debian/compat.
+  * Drop Python 2 support.
+  * Bump debhelper compat level to 12.
+  * Bump standards version to 4.4.0 (no changes).
+  * Enable autopkgtest-pkg-python testsuite.
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 01 Aug 2019 12:44:23 +0200
+
+python-padme (1.1.1-2) unstable; urgency=medium
+
+  * Improve compatibility with the most recent version of python-mock. This
+    fixes a build issue that occurs when padme tries to patch-away bugs in
+    mock that were fixed in the meantime.
+  * Remove the autopkgtest header from debian/control (this is now standard)
+  * Bump Standards-Version to 3.9.6 (no change required)
+
+ -- Zygmunt Krynicki <zygmunt.krynicki@canonical.com>  Wed, 02 Sep 2015 12:36:24 +0200
+
+python-padme (1.1.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #780126)
+
+ -- Zygmunt Krynicki <zygmunt.krynicki@canonical.com>  Tue, 09 Sep 2014 11:13:29 +0200

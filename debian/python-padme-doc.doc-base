@@ -1,0 +1,9 @@
+Document: padme
+Title: Padme Manual
+Author: Canonical Ltd.
+Abstract: This manual describes what Padme is, and how it can be used.
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-padme-doc/html/index.html
+Files: /usr/share/doc/python-padme-doc/html/*.html
