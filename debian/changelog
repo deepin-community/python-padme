@@ -1,3 +1,16 @@
+python-padme (1.1.1-5) unstable; urgency=medium
+
+  * Team upload.
+  * Use sphinx-build
+    Closes: #1042700
+  * Standards-Version: 4.6.2 (routine-update)
+  * Add salsa-ci file (routine-update)
+  * Rules-Requires-Root: no (routine-update)
+  * watch file standard 4 (routine-update)
+  * Drop patch for olt unittest2 which breaks test
+
+ -- Andreas Tille <tille@debian.org>  Thu, 11 Jan 2024 14:46:02 +0100
+
 python-padme (1.1.1-4) unstable; urgency=medium
 
   [ Ondřej Nový ]

@@ -8,10 +8,11 @@ Build-Depends: debhelper-compat (= 13),
                python3-all,
                python3-setuptools,
                python3-sphinx
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-padme.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-padme
 Homepage: https://github.com/zyga/padme/
+Rules-Requires-Root: no
 Testsuite: autopkgtest-pkg-python
 
 Package: python-padme-doc
