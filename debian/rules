@@ -6,4 +6,4 @@ export PYBUILD_NAME=padme
 
 override_dh_auto_build:
 	dh_auto_build --buildsystem=pybuild
-	python3 setup.py build_sphinx -b html
+	LC_ALL=C PYTHONPATH=. http_proxy='http://127.0.0.1:9/' sphinx-build -N -bhtml docs build/sphinx/html
